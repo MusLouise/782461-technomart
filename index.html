@@ -9,7 +9,11 @@
   <div class="top-container">
     <div class="first-block">
       <a class="logo">Техномарт</a>
-      <span class="search">Поиск</span>
+      <form class="search" action="https://echo.technomart.ru" method="post">
+        <label class="visually-hidden" for="search">Поиск</label>
+        <input class="search visually-hidden" id="search" type="search" name="search" placeholder="Поиск:">
+        <button class="button visually-hidden"type="submit">Отправить</button>
+      </form>
       <a href="bookmarks.html">Закладки:0</a>
       <a href="cart.html">Корзина:0</a>
       <a href="order-placement.html">Оформить заказ</a>
@@ -70,22 +74,74 @@
       заехав в наш офис:
     </p>
     <a class="map" href="map-service.html">
-      <img src="img/map.jpg" width="" height="" alt="Пункт выдачи товара. Большая Конюшенная ул., 19">
+      <img src="img/map.jpg" width="300" height="158" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
     </a>
     <a class="button" href="letter.html">Заблудились? НАПИШИТЕ НАМ</a>
+  </section>
+
+  <section class="modal modal-login">
+    <h2>Личный кабинет</h2>
+    <p>Введите свой логин и пароль.</p>
+    <form class="login-form" action="https://echo.technomart.ru" method="post">
+      <p>
+        <label class="visually-hidden" for="user-login">Логин</label>
+        <input class="login-icon-user" id="user-login" type="text" name="login" placeholder="Логин">
+      </p>
+      <p>
+        <label class="visually-hidden" for="user-password">Пароль</label>
+        <input class="login-icon-user" id="user-password" type="password" name="password" placeholder="Пароль">
+      </p>
+      <p class="login-password-info">
+        <label class="login-checkbox">
+          <input type="checkbox" name="remember">
+          Запомните меня
+        </label>
+        <a class="restore" href="#">Я забыл пароль!</a>
+      </p>
+      <button class="button" type="submit">Войти</button>
+    </form>
+    <button class="modal-close" type="button">Закрыть</button>
+  </section>
+
+  <section class="modal modal-map">
+    <h2 class="visually-hidden">Как до нас добраться</h2>
+    <img src="img/modal-map.jpg" width="940" height="446" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
+    <button class="modal-close" type="button">Закрыть</button>
+  </section>
+
+  <section class="modal modal-message">
+    <h2 class="visually-hidden">Напишите нам</h2>
+    <form class="message-form" action="https://echo.technomart.ru" method="post">
+      <p class="name">
+        <label for="client-name">Ваше имя:</label>
+        <input class="name-icon-client" id="client-name" type="text" name="name" placeholder="Имя Фамилия">
+      </p>
+      <p class="e-mail">
+        <label for="client-e-mail">Ваш e-mail</label>
+        <input class="e-mail-icon-client" id="client-e-mail" type="email" name="e-mail" placeholder="email@example.com">
+      </p>
+      <p class="text">
+        <label for="message-text">Текст письма</label>
+        <input class="message-text-icon" id="message-text" type="text" name="text" placeholder="В свободной форме">
+      </p>
+      <button class="button "type="submit">Отправить</button>
+    </form>
+    <button class="modal-close" type="button">Закрыть</button>
   </section>
 
 </main>
 
 <footer class="main-footer">
   <a class="logo">Техномарт</a>
-  <ul class="footer-site-navigation">
-    <li><a href="about.html">Компания</a> </li>
-    <li><a href="news.html">Новости</a></li>
-    <li><a href="catalog.html">Каталог</a></li>
-    <li><a href="delivery.html">Доставка</a></li>
-    <li><a href="contacts.html">Контакты</a></li>
-  </ul>
+  <nav class="footer-navigation">
+    <ul class="footer-site-navigation">
+      <li><a href="about.html">Компания</a> </li>
+      <li><a href="news.html">Новости</a></li>
+      <li><a href="catalog.html">Каталог</a></li>
+      <li><a href="delivery.html">Доставка</a></li>
+      <li><a href="contacts.html">Контакты</a></li>
+    </ul>
+  </nav>
   <p class="footer-contacts">
     г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
     +7 (812) 555-05-55
@@ -114,13 +170,5 @@
     <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
   </p>
 </footer>
-
-<section class="modal modal-login">
-    <h2>Личный кабинет</h2>
-    <p>Введите свой логин и пароль.</p>
-    <!-- Здесь будет форма -->
-    <span class="modal-close">x</span>
-</section>
-
 </body>
 </html>

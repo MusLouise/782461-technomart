@@ -9,7 +9,11 @@
   <div class="top-container">
     <div class="first-block">
       <a class="logo" href="index.html">Техномарт</a>
-      <span class="search">Поиск</span>
+      <form class="search" action="https://echo.technomart.ru" method="post">
+        <label class="visually-hidden" for="search">Поиск</label>
+        <input class="search visually-hidden" id="search" type="search" name="search" placeholder="Поиск:">
+        <button class="button visually-hidden"type="submit">Отправить</button>
+      </form>
       <a href="bookmarks.html">Закладки:0</a>
       <a href="cart.html">Корзина:10</a>
       <a href="order-placement.html">Оформить заказ</a>
@@ -208,16 +212,25 @@
     </ul>
   </section>
 
+  <section class="modal modal-cart">
+    <p class="cart">Товар добавлен в корзину!</p>
+    <a class="button" href="order-placement.html">Оформить заказ</a>
+    <a class="button" href="catalog.html">Продолжить покупки</a>
+    <button class="modal-close" type="button">Закрыть</button>
+  </section>
+
 </main>
 <footer class="main-footer">
   <a class="logo">Техномарт</a>
-  <ul class="footer-site-navigation">
-    <li><a href="about.html">Компания</a> </li>
-    <li><a href="news.html">Новости</a></li>
-    <li><a href="catalog.html">Каталог</a></li>
-    <li><a href="delivery.html">Доставка</a></li>
-    <li><a href="contacts.html">Контакты</a></li>
-  </ul>
+  <nav class="footer-navigation">
+    <ul class="footer-site-navigation">
+      <li><a href="about.html">Компания</a> </li>
+      <li><a href="news.html">Новости</a></li>
+      <li><a href="catalog.html">Каталог</a></li>
+      <li><a href="delivery.html">Доставка</a></li>
+      <li><a href="contacts.html">Контакты</a></li>
+    </ul>
+  </nav>
   <p class="footer-contacts">
     г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
     +7 (812) 555-05-55
