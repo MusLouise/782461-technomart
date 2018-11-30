@@ -120,6 +120,7 @@
           </li>
         </ul>
       </fieldset>
+
       <button class="button filter-button">Показать</button>
     </form>
   </section>
@@ -127,11 +128,18 @@
   <section class="sorting">
     <h2>СОРТИРОВКА:</h2>
     <ul class="sorting-list">
-      <li>ПО ЦЕНЕ</li>
-      <li>ПО ТИПУ</li>
-      <li>ПО ФУНКЦИОНАЛУ</li>
+      <li><a href="#">ПО ЦЕНЕ</a></li>
+      <li><a href="#">ПО ТИПУ</a></li>
+      <li><a href="#">ПО ФУНКЦИОНАЛУ</a></li>
     </ul>
-    <!-- Кнопки ВЕРХ/ВНИЗ через псевдоэлементы CSS-->
+    <ul class="order-switch">
+      <li>
+        <a href="#">Вверх</a>
+      </li>
+      <li>
+        <a href="#">Вниз</a>
+      </li>
+    </ul>
   </section>
 
   <section class="catalog">
@@ -279,20 +287,12 @@
     <button class="modal-close" type="button">Закрыть</button>
   </section>
 
-  <ul class="pages">
-    <li>
-      <button type="button">1</button>
-    </li>
-    <li>
-      <button type="button">2</button>
-    </li>
-    <li>
-      <button type="button">3</button>
-    </li>
-    <li>
-      <button type="button">Следующая</button>
-    </li>
-  </ul>
+  <div class="paginator">
+    <a href="#1">1</a>
+    <a href="#2">2</a>
+    <a href="#3">3</a>
+    <a class="next" href="#next">Следующая</a>
+  </div>
 
   <article class="about-perforator">
     <h2>ПАРА СЛОВ О ПЕРФОРАТОРАХ</h2>
@@ -315,10 +315,10 @@
       <li><a href="contacts.html">Контакты</a></li>
     </ul>
   </nav>
-  <p class="footer-contacts">
+  <address class="company-contacts">
     г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
     +7 (812) 555-05-55
-  </p>
+  </address>
   <ul class="catalog-navigation">
     <li><a href="materials.html">Материалы</a></li>
     <li><a href="equipment.html">Техника</a></li>

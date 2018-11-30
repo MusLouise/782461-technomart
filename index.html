@@ -72,16 +72,36 @@
       <a class="button" href="delivery.html">БЕСПЛАТНО</a>
     </div>
     <div class="slider">
-      <div class="slider-1">
+      <div class="slide-1">
         <h2>ДРЕЛИ</h2>
         <p>Соседям на радость!</p>
         <a class="button" href="catalog.html">ОТКРЫТЬ КАТАЛОГ</a>
+        <img src="img/slider-drill.jpg" width="620" height="266" alt="Реклама Дрели">
       </div>
-      <div class="slider-2">
+      <div class="slide-2">
         <h2>ПЕРФОРАТОРЫ</h2>
         <p>Настоящие мужские игрушки</p>
         <a class="button" href="catalog.html">ОТКРЫТЬ КАТАЛОГ</a>
+        <img src="img/slider-perforator.jpg" width="620" height="266" alt="Реклама Дрели">
       </div>
+    </div>
+    <div class="slides-switcher-arrows">
+      <button class="slide-btn" type="button">Влево
+        <!--иконка влево через CSS-->
+      </button>
+      <button class="slide-btn" type="button">Вправо
+        <!--иконка вправо через CSS-->
+      </button>
+    </div>
+    <div class="slides-switcher-dots">
+      <button class="slide-btn" type="button">
+        Первый слайд
+        <!--иконка точка через CSS-->
+      </button>
+      <button class="slide-btn" type="button">
+        Второй слайд
+        <!--иконка точка через CSS-->
+      </button>
     </div>
   </section>
 
@@ -134,48 +154,48 @@
     </ul>
   </section>
 
-  <section class="popular-manufacturers">
-    <div class="popular-manufacturers-block">
+  <section class="brands">
+    <div class="brands-block">
       <h2>ПОПУЛЯРНЫЕ ПРОИЗВОДИТЕЛИ</h2>
       <a class="button" href="catalog.html">ВСЕ ПРОИЗВОДИТЕЛИ</a>
     </div>
-    <ul class="popular-manufacturers-list">
-      <li class="list-item">
+    <ul class="brands-list">
+      <li class="brands-list-item">
         <a href="manufactureer.html">
           <img src="img/bosch.jpg" width="126" height="37" alt="Производитель Bosch">
         </a>
       </li>
-      <li class="list-item">
+      <li class="brands-list-item">
         <a href="manufactureer.html">
           <img src="img/Makita.jpg" width="123" height="40" alt="Производитель Makita">
         </a>
       </li>
-      <li class="list-item">
+      <li class="brands-list-item">
         <a href="manufactureer.html">
           <img src="img/DeWALT.jpg" width="146" height="44" alt="Производитель DeWALT">
         </a>
       </li>
-      <li class="list-item">
+      <li class="brands-list-item">
         <a href="manufactureer.html">
           <img src="img/Интерскол.jpg" width="200" height="88" alt="Производитель Интерскол">
         </a>
       </li>
-      <li class="list-item">
+      <li class="brands-list-item">
         <a href="manufactureer.html">
           <img src="img/Hitachi.jpg" width="169" height="31" alt="Производитель Hitachi">
         </a>
       </li>
-      <li class="list-item">
+      <li class="brands-list-item">
         <a href="manufactureer.html">
           <img src="img/LG.jpg" width="121" height="73" alt="Производитель LG">
         </a>
       </li>
-      <li class="list-item">
+      <li class="brands-list-item">
         <a href="manufactureer.html">
           <img src="img/AEG.jpg" width="151" height="96" alt="Производитель AEG">
         </a>
       </li>
-      <li class="list-item">
+      <li class="brands-list-item">
         <a href="manufactureer.html">
           <img src="img/Metabo.jpg" width="204" height="69" alt="Производитель Metabo">
         </a>
@@ -189,41 +209,48 @@
       Хороший интернет-магазин отличается от плохого не только ценами!
       Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
     </p>
-    <div class="slider">
-      <ul>
+      <ul class="slider">
         <li>
-          <span class="delivery">Доставка</span>
-          <h3>ДОСТАВКА</h3>
-          <p class="delivery-text">
-            Мы с удовольствием доставим ваш товар прямо
-            к вашему подъезду совершенно бесплатно!
-            Ведь мы неплохо заработаем,
-            поднимая его на ваш этаж!
-          </p>
-          <img src="img/lorry.png" width="468" height="261" alt="Доставка">
+          <button class="slider-btn" type="button">Доставка</button>
         </li>
         <li>
-          <span class="warranty">Гарантия</span>
-          <h3>ГАРАНТИЯ</h3>
-          <p class="warranty-text">
-            Если купленный у нас товар поломается или заискрит,
-            а также в случае пожара, спровоцированного его возгаранием,  вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый.
-            Дом уж восстановите как-нибудь сами.
-          </p>
-          <img src="img/medal.png" width="" height="" alt="100% Качество">
+          <button class="slider-btn" type="button">Гарантия</button>
         </li>
         <li>
-          <span class="credit">Кредит</span>
-          <h3>КРЕДИТ</h3>
-          <p class="credit-text">
-            Залезть в долговую яму стало проще!
-            Кредитные консультанты придут вам на помощь.
-          </p>
-          <img src="img/money.png" width="" height="" alt="Выдача кредита">
-          <a class="button" href="credit.html">Оформить заявку</a>
+          <button class="slider-btn" type="button">Кредит</button>
         </li>
       </ul>
-    </div>
+      <div class="slider-delivery">
+        <span class="delivery">Доставка</span>
+        <h3>ДОСТАВКА</h3>
+        <p class="delivery-text">
+          Мы с удовольствием доставим ваш товар прямо
+          к вашему подъезду совершенно бесплатно!
+          Ведь мы неплохо заработаем,
+          поднимая его на ваш этаж!
+        </p>
+        <img src="img/lorry.png" width="468" height="261" alt="Доставка">
+      </div>
+      <div class="slider-warranty">
+        <span class="warranty">Гарантия</span>
+        <h3>ГАРАНТИЯ</h3>
+        <p class="warranty-text">
+          Если купленный у нас товар поломается или заискрит,
+          а также в случае пожара, спровоцированного его возгаранием,  вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый.
+          Дом уж восстановите как-нибудь сами.
+        </p>
+        <img src="img/medal.png" width="" height="" alt="100% Качество">
+      </div>
+      <div class="slider-credit">
+        <span class="credit">Кредит</span>
+        <h3>КРЕДИТ</h3>
+        <p class="credit-text">
+          Залезть в долговую яму стало проще!
+          Кредитные консультанты придут вам на помощь.
+        </p>
+        <img src="img/money.png" width="" height="" alt="Выдача кредита">
+        <a class="button" href="credit.html">Оформить заявку</a>
+      </div>
   </section>
 
   <section class="about-us">
@@ -319,10 +346,10 @@
       <li><a href="contacts.html">Контакты</a></li>
     </ul>
   </nav>
-  <p class="footer-contacts">
+  <address class="company-contacts">
     г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
     +7 (812) 555-05-55
-  </p>
+  </address>
   <ul class="catalog-navigation">
     <li><a href="materials.html">Материалы</a></li>
     <li><a href="equipment.html">Техника</a></li>
