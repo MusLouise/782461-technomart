@@ -70,8 +70,68 @@
   </nav>
 
   <section class="filters">
-    <h2 class="visually-hidden">Фильтр товаров</h2>
-    <!-- Здесь будет форма -->
+    <h2>Фильтр:</h2>
+    <form class="filter" method="get" action="http://echo.technomart.ru">
+
+      <fieldset>
+        <legend>Цена:</legend>
+        <!--
+        <label class="visually-hidden" for="filter-cost">Цена товара</label>
+        <input type="range" id="filter-cost" name="price" min="0" max="30000" step="1">
+        -->
+      </fieldset>
+
+      <fieldset>
+        <legend>Производители:</legend>
+        <ul>
+          <li class="filter-option">
+            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="bosch" id="filter-bosch" checked>
+            <label for="filter-bosch">BOSCH</label>
+          </li>
+          <li class="filter-option">
+            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="interskol" id="filter-interskol">
+            <label for="filter-interskol">ИНТЕРСКОЛ</label>
+          </li>
+          <li class="filter-option">
+            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="makita" id="filter-makita" checked>
+            <label for="filter-makita">MAKITA</label>
+          </li>
+          <li class="filter-option">
+            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="dewalt" id="filter-dewalt">
+            <label for="filter-dewalt">DEWALT</label>
+          </li>
+          <li class="filter-option">
+            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="hitachi" id="filter-hitachi">
+            <label for="filter-hitachi">HITACHI</label>
+          </li>
+        </ul>
+      </fieldset>
+
+      <fieldset>
+        <legend>Питание:</legend>
+        <ul>
+          <li class="filter-option">
+            <input class="visually-hidden filter-input filter-input-radio" type="radio" name="rechargeable-group" value="rechargeable" id="filter-rechargeable" checked>
+            <label for="filter-rechargeable">АККУМУЛЯТОРНЫЕ</label>
+          </li>
+          <li class="filter-option">
+            <input class="visually-hidden filter-input filter-input-radio" type="radio" name="net-group" value="net" id="filter-net">
+            <label for="filter-net">СЕТЕВЫЕ</label>
+          </li>
+        </ul>
+      </fieldset>
+      <button class="button filter-button">Показать</button>
+    </form>
+  </section>
+
+  <section class="sorting">
+    <h2>СОРТИРОВКА:</h2>
+    <ul class="sorting-list">
+      <li>ПО ЦЕНЕ</li>
+      <li>ПО ТИПУ</li>
+      <li>ПО ФУНКЦИОНАЛУ</li>
+    </ul>
+    <!-- Кнопки ВЕРХ/ВНИЗ через псевдоэлементы CSS-->
   </section>
 
   <section class="catalog">
@@ -218,6 +278,30 @@
     <a class="button" href="catalog.html">Продолжить покупки</a>
     <button class="modal-close" type="button">Закрыть</button>
   </section>
+
+  <ul class="pages">
+    <li>
+      <button type="button">1</button>
+    </li>
+    <li>
+      <button type="button">2</button>
+    </li>
+    <li>
+      <button type="button">3</button>
+    </li>
+    <li>
+      <button type="button">Следующая</button>
+    </li>
+  </ul>
+
+  <article class="about-perforator">
+    <h2>ПАРА СЛОВ О ПЕРФОРАТОРАХ</h2>
+    <p class="perforator-text">
+      Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.
+      Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка.
+      В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
+    </p>
+  </article>
 
 </main>
 <footer class="main-footer">
