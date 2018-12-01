@@ -9,7 +9,7 @@
   <div class="top-container">
     <div class="first-block">
       <a class="logo" href="index.html">Техномарт</a>
-      <form class="search" action="https://echo.technomart.ru" method="post">
+      <form class="search" action="https://echo.htmlacademy.ru" method="post">
         <label class="visually-hidden" for="search">Поиск</label>
         <input class="search visually-hidden" id="search" type="search" name="search" placeholder="Поиск:">
         <button class="button visually-hidden" type="submit">Отправить</button>
@@ -26,10 +26,10 @@
       и инструментов для ремонта
     </h1>
     <h2 class="visually hidden">Контактная информация</h2>
-    <p class="contact-info">
+    <div class="contact-info">
       <a href="tel:7-812-555-05-55">+7 (812) 555-05-55</a>
-      г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
-    </p>
+    <address>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
+    </div>
     <ul class="user-navigation">
       <li>
         <a class="login-link" href="profile.html">
@@ -71,7 +71,7 @@
 
   <section class="filters">
     <h2>Фильтр:</h2>
-    <form class="filter" method="get" action="http://echo.technomart.ru">
+    <form class="filter" method="get" action="https://echo.htmlacademy.ru">
 
       <fieldset>
         <legend>Цена:</legend>
@@ -111,11 +111,11 @@
         <legend>Питание:</legend>
         <ul>
           <li class="filter-option">
-            <input class="visually-hidden filter-input filter-input-radio" type="radio" name="rechargeable-group" value="rechargeable" id="filter-rechargeable" checked>
+            <input class="visually-hidden filter-input filter-input-radio" type="radio" name="battery-group" value="rechargeable" id="filter-rechargeable">
             <label for="filter-rechargeable">АККУМУЛЯТОРНЫЕ</label>
           </li>
           <li class="filter-option">
-            <input class="visually-hidden filter-input filter-input-radio" type="radio" name="net-group" value="net" id="filter-net">
+            <input class="visually-hidden filter-input filter-input-radio" type="radio" name="battery-group" value="net" id="filter-net">
             <label for="filter-net">СЕТЕВЫЕ</label>
           </li>
         </ul>
@@ -280,13 +280,6 @@
     </ul>
   </section>
 
-  <section class="modal modal-cart">
-    <p class="cart">Товар добавлен в корзину!</p>
-    <a class="button" href="order-placement.html">Оформить заказ</a>
-    <a class="button" href="catalog.html">Продолжить покупки</a>
-    <button class="modal-close" type="button">Закрыть</button>
-  </section>
-
   <div class="paginator">
     <a href="#1">1</a>
     <a href="#2">2</a>
@@ -343,5 +336,13 @@
     <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
   </p>
 </footer>
+
+<section class="modal modal-cart">
+  <p class="cart">Товар добавлен в корзину!</p>
+  <a class="button" href="order-placement.html">Оформить заказ</a>
+  <a class="button" href="catalog.html">Продолжить покупки</a>
+  <button class="modal-close" type="button">Закрыть</button>
+</section>
+
 </body>
 </html>
