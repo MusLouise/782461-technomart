@@ -224,6 +224,7 @@ fieldset .filter-option {
   font-size: 15px;
   line-height: 20px;
   color: #000000;
+  list-style: none;
 
   background-color: white;
 }
@@ -285,11 +286,19 @@ fieldset .filter-option {
   background-color: #63a63e;
 }
 
+.product-decision a:first-child:hover{
+  background-color: #5fbb2d;
+}
+
 .product-decision a:last-child{
   color:black;
 
   background-color: white;
-  border: 1px solid #63a63e;
+  border: 3px solid #63a63e;
+}
+
+.product-decision a:last-child:hover {
+  border: 3px solid #32425c;
 }
 
 .main-footer {
