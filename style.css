@@ -323,7 +323,7 @@ input[type="search"]:focus {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
-h3 a {
+.title-link {
   font-family: "PTSans", Arial, sans-serif;
   font-size: 13px;
   line-height: 20px;
