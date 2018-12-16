@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Интернет-магазин "Техномарт"</title>
-  <link href="https://fonts.googleapis.com/css?family=Cuprum:400,700&amp;subset=cyrillic" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700&amp;subset=cyrillic" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
 </head>
@@ -48,7 +48,7 @@
   </div>
   <nav class="header-navigation container">
     <ul class="site-navigation">
-      <li><a href="index.html">Главная</a></li>
+      <li><a class="first" href="index.html">Главная</a></li>
       <li><a href="about.html">Компания</a></li>
       <li><a href="catalog.html">Каталог</a></li>
       <li><a href="news.html">Новости</a></li>
@@ -117,52 +117,52 @@
           Второй слайд
 
         </button>
-      </div>
-    </div>-->
+      </div>-->
+    </div>
   </section>
 
   <section class="popular-products">
-    <h2 class="popular-products-title">ПОПУЛЯРНЫЕ ТОВАРЫ
-    <a class="popular-products-link button" href="catalog.html">ВСЕ ПОПУЛЯРНЫЕ ТОВАРЫ</a>
-    </h2>
-      <ul class="catalog-list">
+      <h2 class="popular-products-title">ПОПУЛЯРНЫЕ ТОВАРЫ:
+      <a class="popular-products-link button" href="catalog.html">ВСЕ ПОПУЛЯРНЫЕ ТОВАРЫ</a>
+      </h2>
+      <ul class="popular-catalog-list">
       <li class="catalog-item">
-        <img class="image" src="img/product-1.jpg" width="184" height="164" alt="Перфоратор BOSCH BFG 3000">
+        <img class="image-1" src="img/product-1.jpg" width="184" height="164" alt="Перфоратор BOSCH BFG 3000">
         <h3>
           <a class="title-link" href="catalog-item.html">Перфоратор BOSCH BFG 9000</a>
         </h3>
         <p class="catalog-item-price">
-          <span class="old-price">32 500 ₽</span>
-          <a class="current-price button" href="#">25 500 ₽</a>
+          <span class="old-price">32500 P.</span>
+          <a class="current-price button" href="#">25500 P.</a>
         </p>
       </li>
       <li class="catalog-item">
-        <img class="image" src="img/product-2.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
+        <img class="image-2" src="img/product-2.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
         <h3>
-          <a class="title-link" href="catalog-item.html">Перфоратор BOSCH BFG 9000</a>
+          <a class="title-link" href="catalog-item.html">Перфоратор BOSCH BFG 3000</a>
         </h3>
         <p class="catalog-item-price">
-          <span class="old-price">22 500 ₽</span>
-          <a class="current-price button" href="#">15 500 ₽</a>
+          <span class="old-price">22500 P.</span>
+          <a class="current-price button" href="#">15500 P.</a>
         </p>
       </li>
       <li class="catalog-item">
-        <img class="image" src="img/product-3.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 3000">
+        <img class="image-3" src="img/product-3.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 3000">
         <h3>
-          <a class="title-link" href="catalog-item.html">Перфоратор BOSCH BFG 9000</a>
+          <a class="title-link" href="catalog-item.html">Перфоратор BOSCH BFG 6000</a>
         </h3>
         <p class="catalog-item-price">
-          <span class="old-price">30 500 ₽</span>
-          <a class="current-price button" href="#">25 500 ₽</a>
+          <span class="old-price">30500 P.</span>
+          <a class="current-price button" href="#">25500 P.</a>
         </p>
       </li>
       <li class="catalog-item">
-        <img class="image" src="img/product-4.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
+        <img class="image-4" src="img/product-4.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
         <h3>
-          <a class="title-link" href="catalog-item.html">Перфоратор BOSCH BFG 9000</a>
+          <a class="title-link" href="catalog-item.html">Перфоратор BOSCH BFG 2000</a>
         </h3>
-        <p class="catalog-item-price">
-          <a class="current-price button" href="#">12 500 ₽</a>
+        <p class="no-sale-item-price">
+          <a class="current-price button" href="#">12500 P.</a>
         </p>
         <div class="flag flag-new">
           new
@@ -172,7 +172,7 @@
   </section>
 
   <section class="brands">
-    <h2 class="brands-title">ПОПУЛЯРНЫЕ ПРОИЗВОДИТЕЛИ
+    <h2 class="brands-title">ПОПУЛЯРНЫЕ ПРОИЗВОДИТЕЛИ:
       <a class="brands-link button" href="catalog.html">ВСЕ ПРОИЗВОДИТЕЛИ</a>
     </h2>
     <ul class="brands-list">
@@ -245,7 +245,7 @@
           Ведь мы неплохо заработаем,
           поднимая его на ваш этаж!
         </p>
-        <img src="img/lorry.png" width="468" height="261" alt="Доставка">
+        <!--<img src="img/lorry.png" width="468" height="261" alt="Доставка">-->
       </div>
       <div class="slider-warranty">
         <span class="warranty">Гарантия</span>
@@ -255,7 +255,7 @@
           а также в случае пожара, спровоцированного его возгаранием,  вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый.
           Дом уж восстановите как-нибудь сами.
         </p>
-        <img src="img/medal.png" width="" height="" alt="100% Качество">
+        <!--<img src="img/medal.png" width="" height="" alt="100% Качество">-->
       </div>
       <div class="slider-credit">
         <span class="credit">Кредит</span>
@@ -264,7 +264,7 @@
           Залезть в долговую яму стало проще!
           Кредитные консультанты придут вам на помощь.
         </p>
-        <img src="img/money.png" width="" height="" alt="Выдача кредита">
+        <!--<img src="img/money.png" width="" height="" alt="Выдача кредита">-->
         <a class="button" href="credit.html">Оформить заявку</a>
       </div>
   </section>
@@ -318,7 +318,7 @@
 
   <div class="container">
     <address class="company-contacts">
-      г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
+      г. Санкт-Петербург, ул. Б.&nbsp;Конюшенная, д. 19/8
       +7 (812) 555-05-55
     </address>
     <ul class="catalog-navigation">
@@ -331,7 +331,7 @@
 
   <div class="container">
     <p class="company-copyright">
-      2010–2017 Компания «Техномарт»
+      &copy 2010–2017 Компания «Техномарт»
       Все права защищены
     </p>
     <ul class="footer-social">
@@ -368,7 +368,7 @@
       <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
     </p>
     <p class="site-copyright">
-      Разработано:
+      Разработано —
       <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
     </p>
   </div>
