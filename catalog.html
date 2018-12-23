@@ -13,8 +13,8 @@
     <div class="container">
       <a class="logo" href="index.html">Техномарт</a>
       <form class="search" action="https://echo.htmlacademy.ru" method="post">
-        <label class="visually-hidden" for="search">Поиск</label>
         <input class="site-search" id="search" type="search" name="search" placeholder="Поиск:">
+        <label class="visually-hidden" for="search">Поиск</label>
       </form>
       <a class="bookmarks" href="bookmarks.html">Закладки: 0</a>
       <a class="cart" href="cart.html">Корзина: 10</a>
@@ -110,7 +110,7 @@
                 <label for="filter-bosch">BOSCH</label>
               </li>
               <li class="filter-option">
-                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="interskol" id="filter-interskol">
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="interskol" id="filter-interskol" disabled>
                 <label for="filter-interskol">ИНТЕРСКОЛ</label>
               </li>
               <li class="filter-option">
@@ -323,7 +323,7 @@
     <div class="container">
       <h2>ПАРА СЛОВ О ПЕРФОРАТОРАХ</h2>
       <p class="perforator-text">
-        Перфоратор&nbsp;&mdash; универсальный строительный инструмент. Предназначен для сверления и&nbsp;долбления отверстий в&nbsp;кирпиче, бетоне и&nbsp;камне.<br>Существуют электромеханические и&nbsp;пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и&nbsp;отбойного молотка. В<br>ассортиментном ряду есть выбор &laquo;трехрежимников&raquo;: в&nbsp;одном устройстве будут совмещены отбойный молоток и&nbsp;ударная дрель.
+        Перфоратор&nbsp;&mdash; универсальный строительный инструмент. Предназначен для сверления и&nbsp;долбления отверстий в&nbsp;кирпиче, бетоне и&nbsp;камне.<br>Существуют электромеханические и&nbsp;пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и&nbsp;отбойного молотка. В ассортиментном ряду есть выбор &laquo;трехрежимников&raquo;: в&nbsp;одном устройстве будут совмещены отбойный молоток и&nbsp;ударная дрель.
       </p>
     </div>
   </article>
@@ -411,44 +411,7 @@
   <button class="modal-close" type="button">Закрыть</button>
 </section>
 
-<script>
-  var cartLink = document.querySelectorAll(".buy");
-
-  var cartPopup = document.querySelector(".modal-cart");
-  var cartClose = cartPopup.querySelector(".modal-close");
-  var cartOrder = cartPopup.querySelector(".order-placement");
-
-  for(var i=0; i<cartLink.length; i++){
-    cartLink[i].addEventListener("click", function (evt) {
-      evt.preventDefault();
-      cartPopup.classList.add("modal-show");
-      cartOrder.focus();
-    })
-  }
-
-/*  cartLink.forEach( function (item){
-    item.addEventListener("click", function (evt) {
-      evt.preventDefault();
-      cartPopup.classList.add("modal-show");
-      cartOrder.focus();
-    })
-  } ); */
-
-
-  cartClose.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    cartPopup.classList.remove("modal-show");
-  });
-
-  window.addEventListener("keydown", function (evt) {
-    if (evt.keyCode === 27) {
-      if (cartPopup.classList.contains("modal-show")) {
-        evt.preventDefault();
-        cartPopup.classList.remove("modal-show");
-      }
-    }
-  });
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
