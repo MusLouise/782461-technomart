@@ -86,37 +86,24 @@
     <div class="promo-slider">
       <p>Слайдер</p>
       <!--
-      <div class="slide-1">
-        <h2>ДРЕЛИ</h2>
-        <p>Соседям на радость!</p>
-        <a class="button" href="catalog.html">ОТКРЫТЬ КАТАЛОГ</a>
-        <img src="img/slider-drill.jpg" width="620" height="266" alt="Реклама Дрели">
-      </div>
-      <div class="slide-2">
-        <h2>ПЕРФОРАТОРЫ</h2>
-        <p>Настоящие мужские игрушки</p>
-        <a class="button" href="catalog.html">ОТКРЫТЬ КАТАЛОГ</a>
-        <img src="img/slider-perforator.jpg" width="620" height="266" alt="Реклама Дрели">
-      </div>
-    </div>
-    <div class="slides-switcher">
-      <div class="slides-switcher-arrows">
-        <button class="slide-btn" type="button">Влево
-
-        </button>
-        <button class="slide-btn" type="button">Вправо
-
-        </button>
-      </div>
-      <div class="slides-switcher-dots">
-        <button class="slide-btn" type="button">
-          Первый слайд
-
-        </button>
-        <button class="slide-btn" type="button">
-          Второй слайд
-
-        </button>
+      <div class="slider">
+        <div class="slider-controls"></div>
+        <div class="slider-inner">
+          <div class="slider-slides">
+            <div class="slide-1">
+              <h2>ДРЕЛИ</h2>
+              <p>Соседям на радость!</p>
+              <a class="button" href="catalog.html">ОТКРЫТЬ КАТАЛОГ</a>
+              <img src="img/slider-drill.jpg" width="620" height="266" alt="Реклама Дрели">
+            </div>
+            <div class="slide-2">
+              <h2>ПЕРФОРАТОРЫ</h2>
+              <p>Настоящие мужские игрушки</p>
+              <a class="button" href="catalog.html">ОТКРЫТЬ КАТАЛОГ</a>
+              <img src="img/slider-perforator.jpg" width="620" height="266" alt="Реклама Дрели">
+            </div>
+          </div>
+        </div>
       </div>-->
     </div>
   </section>
@@ -295,7 +282,7 @@
       <a class="map" href="map-service.html">
         <img src="img/map.jpg" width="300" height="158" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
       </a>
-      <a class="button" href="letter.html">Заблудились? НАПИШИТЕ НАМ</a>
+      <a class="button letter-link" href="letter.html">Заблудились? НАПИШИТЕ НАМ</a>
     </section>
 
   </div>
@@ -373,30 +360,6 @@
     </p>
   </div>
 </footer>
-<!--
-<section class="modal modal-login">
-  <h2>Личный кабинет</h2>
-  <p>Введите свой логин и пароль.</p>
-  <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
-    <p>
-      <label class="visually-hidden" for="user-login">Логин</label>
-      <input class="login-icon-user" id="user-login" type="text" name="login" placeholder="Логин">
-    </p>
-    <p>
-      <label class="visually-hidden" for="user-password">Пароль</label>
-      <input class="login-icon-user" id="user-password" type="password" name="password" placeholder="Пароль">
-    </p>
-    <p class="login-password-info">
-      <label class="login-checkbox">
-        <input type="checkbox" name="remember">
-        Запомните меня
-      </label>
-      <a class="restore" href="#">Я забыл пароль!</a>
-    </p>
-    <button class="button" type="submit">Войти</button>
-  </form>
-  <button class="modal-close" type="button">Закрыть</button>
-</section>-->
 
 <section class="modal modal-map">
   <h2 class="visually-hidden">Как до нас добраться</h2>
@@ -419,10 +382,101 @@
       <label for="message-text">Текст письма</label>
       <textarea class="message-text-field" name="message-text" id="message-text" rows="5"  placeholder="В свободной форме"></textarea>
     </p>
-    <button class="modal-submit button" type="submit">Отправить</button>
+    <button class="button" type="submit">Отправить</button>
   </form>
   <button class="modal-close" type="button">Закрыть</button>
 </section>
+
+<script>
+  var link = document.querySelector(".letter-link");
+
+  var popup = document.querySelector(".write-us");
+  var close = popup.querySelector(".modal-close");
+
+  var form = popup.querySelector("form");
+  var messageFrom = popup.querySelector("[name=name]");
+  var eMail = popup.querySelector("[name=e-mail]");
+  var text = popup.querySelector("[name=message-text]");
+
+  var isStorageSupport = true;
+  var storage = "";
+
+  try {
+    storage = localStorage.getItem("messageFrom");
+    storage = localStorage.getItem("eMail");
+  } catch (err) {
+    isStorageSupport = false;
+  }
+
+  link.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    popup.classList.add("modal-show");
+
+    if (storage) {
+      messageFrom.value = storage;
+      eMail.value = storage;
+      text.focus();
+    }else {
+      messageFrom.focus();
+    }
+  });
+
+  close.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    popup.classList.remove("modal-show");
+    popup.classList.remove("modal-error");
+  });
+
+  form.addEventListener("submit", function (evt) {
+    evt.preventDefault();
+    if (!messageFrom.value || !eMail.value || !text.value) {
+      evt.preventDefault();
+      popup.classList.remove("modal-error");
+      popup.offsetWidth = popup.offsetWidth;
+      popup.classList.add("modal-error");}
+    else {
+      if (isStorageSupport) {
+        localStorage.setItem("messageFrom", messageFrom.value);
+        localStorage.setItem("eMail", eMail.value);
+      }
+    }
+    });
+
+  window.addEventListener("keydown", function (evt) {
+    if (evt.keyCode === 27) {
+      evt.preventDefault();
+      if (popup.classList.contains("modal-show")) {
+        popup.classList.remove("modal-show");
+        popup.classList.remove("modal-error");
+      }
+    }
+  });
+
+  var mapLink = document.querySelector(".map");
+
+  var mapPopup = document.querySelector(".modal-map");
+  var mapClose = mapPopup.querySelector(".modal-close");
+
+  mapLink.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    mapPopup.classList.add("modal-show");
+  });
+
+  mapClose.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    mapPopup.classList.remove("modal-show");
+  });
+
+  window.addEventListener("keydown", function (evt) {
+    evt.preventDefault();
+    if (evt.keyCode === 27) {
+      if (mapPopup.classList.contains("modal-show")) {
+        mapPopup.classList.remove("modal-show");
+      }
+    }
+  });
+
+</script>
 
 </body>
 </html>

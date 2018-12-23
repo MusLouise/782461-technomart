@@ -110,7 +110,7 @@
                 <label for="filter-bosch">BOSCH</label>
               </li>
               <li class="filter-option">
-                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="interskol" id="filter-interskol">
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="interskol" id="filter-interskol" disabled>
                 <label for="filter-interskol">ИНТЕРСКОЛ</label>
               </li>
               <li class="filter-option">
@@ -402,11 +402,50 @@
 <section class="modal modal-cart">
   <p class="modal-cart-message">Товар добавлен в корзину!</p>
   <div class="buttons-container">
-    <a class="button" href="order-placement.html">Оформить заказ</a>
-    <a class="button" href="catalog.html">Продолжить покупки</a>
+    <a class="button order-placement" href="order-placement.html">Оформить заказ</a>
+    <a class="button go-catalog" href="catalog.html">Продолжить покупки</a>
   </div>
   <button class="modal-close" type="button">Закрыть</button>
 </section>
+
+<script>
+  var cartLink = document.querySelectorAll(".buy");
+
+  var cartPopup = document.querySelector(".modal-cart");
+  var cartClose = cartPopup.querySelector(".modal-close");
+  var cartOrder = cartPopup.querySelector(".order-placement");
+
+  for(var i=0; i<cartLink.length; i++){
+    cartLink[i].addEventListener("click", function (evt) {
+      evt.preventDefault();
+      cartPopup.classList.add("modal-show");
+      cartOrder.focus();
+    })
+  }
+
+/*  cartLink.forEach( function (item){
+    item.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      cartPopup.classList.add("modal-show");
+      cartOrder.focus();
+    })
+  } ); */
+
+
+  cartClose.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    cartPopup.classList.remove("modal-show");
+  });
+
+  window.addEventListener("keydown", function (evt) {
+    evt.preventDefault();
+    if (evt.keyCode === 27) {
+      if (cartPopup.classList.contains("modal-show")) {
+        cartPopup.classList.remove("modal-show");
+      }
+    }
+  });
+</script>
 
 </body>
 </html>
