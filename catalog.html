@@ -13,8 +13,9 @@
     <div class="container">
       <a class="logo" href="index.html">Техномарт</a>
       <form class="search" action="https://echo.htmlacademy.ru" method="post">
+        <label class="input-indicator" for="search">
         <input class="site-search" id="search" type="search" name="search" placeholder="Поиск:">
-        <label class="visually-hidden" for="search">Поиск</label>
+        </label>
       </form>
       <a class="bookmarks" href="bookmarks.html">Закладки: 0</a>
       <a class="cart" href="cart.html">Корзина: 10</a>
@@ -110,7 +111,7 @@
                 <label for="filter-bosch">BOSCH</label>
               </li>
               <li class="filter-option">
-                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="interskol" id="filter-interskol" disabled>
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="interskol" id="filter-interskol">
                 <label for="filter-interskol">ИНТЕРСКОЛ</label>
               </li>
               <li class="filter-option">
@@ -322,9 +323,14 @@
   <article class="about-perforator">
     <div class="container">
       <h2>ПАРА СЛОВ О ПЕРФОРАТОРАХ</h2>
-      <p class="perforator-text">
-        Перфоратор&nbsp;&mdash; универсальный строительный инструмент. Предназначен для сверления и&nbsp;долбления отверстий в&nbsp;кирпиче, бетоне и&nbsp;камне.<br>Существуют электромеханические и&nbsp;пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и&nbsp;отбойного молотка. В ассортиментном ряду есть выбор &laquo;трехрежимников&raquo;: в&nbsp;одном устройстве будут совмещены отбойный молоток и&nbsp;ударная дрель.
-      </p>
+      <div class="perforator-text">
+        <p class="text-part1">
+          Перфоратор&nbsp;&mdash; универсальный строительный инструмент. Предназначен для сверления и&nbsp;долбления отверстий в&nbsp;кирпиче, бетоне и&nbsp;камне.
+        </p>
+        <p class="text-part2">
+          Существуют электромеханические и&nbsp;пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и&nbsp;отбойного молотка. В ассортиментном ряду есть выбор &laquo;трехрежимников&raquo;: в&nbsp;одном устройстве будут совмещены отбойный молоток и&nbsp;ударная дрель.
+        </p>
+      </div>
     </div>
   </article>
 
