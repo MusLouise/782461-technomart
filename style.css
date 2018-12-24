@@ -130,14 +130,14 @@ input[type="radio"].visually-hidden {
   padding: 12px 180px 12px 47px;
 }
 
-.input-indicator {
+.search label {
   position: relative;
 }
 
-.input-indicator::before {
+.site-search + label::before {
   content: "";
   position: absolute;
-  top: 1px;
+  top: -30px;
   left: 17px;
 
   width: 17px;
@@ -169,6 +169,7 @@ input[type="radio"].visually-hidden {
 
 .inner-page .cart {
   padding: 10px 23px 10px 52px;
+  background-color: #ee3643;
 }
 
 .inner-page .bookmarks {
@@ -231,7 +232,7 @@ input[type="radio"].visually-hidden {
   background-color: #212a3a;
 }
 
-.input-indicator:hover::before {
+.site-search:hover + label::before {
   opacity: 1;
 }
 
@@ -268,7 +269,7 @@ input[type="radio"].visually-hidden {
   outline: none;
 }
 
-.input-indicator:focus::before{
+.site-search:focus + label::before{
   background-image: url("img/icon-search-focus.svg");
 }
 
@@ -1604,13 +1605,6 @@ body {
   height: 123px;
 }
 
-.promotional-unit .promo-slider {
-  margin-top: 20px;
-  margin-right: 320px;
-  width: 620px;
-  height: 266px;
-}
-
 .sale,
 .delivery {
   position: absolute;
@@ -1770,6 +1764,92 @@ body {
   background-position: 0 0;
 }
 
+.slider-wrapper {
+  margin-top: 20px;
+  margin-right: 320px;
+
+  min-width: 620px;
+  min-height: 266px;
+
+  background-image: url("img/slider-drill.jpg");
+  background-repeat: no-repeat;
+  background-position: top center;
+
+  transition: background-image 0.5s ease, background-color 0.5s ease;
+}
+
+.slider {
+  position: relative;
+
+  padding-top: 321px;
+
+  text-align: center;
+  color: #ffffff;
+}
+
+.slider-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.slide {
+  display: none;
+}
+
+.slider-title {
+  margin: 0;
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 36px;
+  line-height: 36px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.slider-text {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.slider-item-button {
+  padding: 10px 46px 10px 50px;
+
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  color: #ffffff;
+  text-align: center;
+  vertical-align: top;
+  text-decoration: none;
+
+  border-radius: 2px;
+  border: none;
+}
+
+.slider-controls {
+  position: absolute;
+  bottom: -77px;
+  left: 295px;
+  z-index: 20;
+
+  font-size: 0;
+}
+
+.slider-controls label {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 10px;
+
+  vertical-align: top;
+
+  background-color: #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+}
 
 .popular-products {
   max-width: 940px;

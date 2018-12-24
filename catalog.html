@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <title>Техномарт.Каталог</title>
@@ -13,8 +13,9 @@
     <div class="container">
       <a class="logo" href="index.html">Техномарт</a>
       <form class="search" action="https://echo.htmlacademy.ru" method="post">
-        <label class="input-indicator" for="search">
         <input class="site-search" id="search" type="search" name="search" placeholder="Поиск:">
+        <label class="input-indicator" for="search">
+
         </label>
       </form>
       <a class="bookmarks" href="bookmarks.html">Закладки: 0</a>
@@ -147,7 +148,7 @@
         </form>
       </section>
 
-      <section class="catalog">
+      <div class="catalog">
         <section class="sorting">
           <h3 class="sorting-title">СОРТИРОВКА:</h3>
           <ul class="sorting-list">
@@ -316,7 +317,7 @@
           <li class="pagination-item"><a href="#">3</a></li>
           <li class="pagination-item"><a href="#">Следующая</a></li>
         </ul>
-      </section>
+      </div>
     </div>
   </div>
 
@@ -365,7 +366,7 @@
 
   <div class="container">
     <p class="company-copyright">
-      &copy 2010–2017 Компания «Техномарт»
+      &copy; 2010–2017 Компания «Техномарт»
       Все права защищены
     </p>
     <ul class="footer-social">
@@ -409,6 +410,7 @@
 </footer>
 
 <section class="modal modal-cart">
+  <h2 class="visually-hidden">Купить или продолжить</h2>
   <p class="modal-cart-message">Товар добавлен в корзину!</p>
   <div class="buttons-container">
     <a class="button order-placement" href="order-placement.html">Оформить заказ</a>
@@ -417,7 +419,7 @@
   <button class="modal-close" type="button">Закрыть</button>
 </section>
 
-<script src="script.js"></script>
+<script src="script_catalog.js"></script>
 
 </body>
 </html>
