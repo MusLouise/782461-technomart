@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Техномарт.Каталог</title>
+  <meta charset="UTF-8">
+  <title>Техномарт.Каталог</title>
   <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700&amp;subset=cyrillic" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
-  <link href="style.css" rel="stylesheet">
+  <link href="./css/style.css" rel="stylesheet">
 </head>
 <body class="inner-page">
 <header class="main-header">
@@ -14,9 +14,7 @@
       <a class="logo" href="index.html">Техномарт</a>
       <form class="search" action="https://echo.htmlacademy.ru" method="post">
         <input class="site-search" id="search" type="search" name="search" placeholder="Поиск:">
-        <label class="input-indicator" for="search">
-
-        </label>
+        <label class="input-indicator" for="search"></label>
       </form>
       <a class="bookmarks" href="bookmarks.html">Закладки: 0</a>
       <a class="cart" href="cart.html">Корзина: 10</a>
@@ -30,7 +28,7 @@
     <h2 class="visually-hidden">Контактная информация</h2>
     <div class="contact-info">
       <a href="tel:7-812-555-05-55">+7 (812) 555-05-55</a>
-    <address>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
+      <address>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
     </div>
     <div class="authorized-user-navigation">
       <div class="profile">
@@ -68,7 +66,6 @@
     </ul>
   </nav>
 </header>
-
 <main>
   <div class="container">
     <nav class="add-site-navigation">
@@ -88,22 +85,27 @@
         <li class="breadcrumbs-current">ПЕРФОРАТОРЫ</li>
       </ul>
     </nav>
-
     <h2 class="page-title">ПЕРФОРАТОРЫ</h2>
-
     <div class="catalog-columns">
       <section class="filters">
         <h3 class="filters-title">Фильтр:</h3>
         <form class="filter" method="get" action="https://echo.htmlacademy.ru">
-
-          <fieldset>
+          <fieldset class="filter-item">
             <legend>Цена:</legend>
-            <!--
-            <label class="visually-hidden" for="filter-cost">Цена товара</label>
-            <input type="range" id="filter-cost" name="price" min="0" max="30000" step="1">
-            -->
+            <div class="range-filter">
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar"></div>
+                </div>
+                <div class="toggle toggle-min"></div>
+                <div class="toggle toggle-max"></div>
+              </div>
+              <div class="price-controls">
+                <label class="min-price"><input name="min-price" type="text" value="0"></label>
+                <label class="max-price"><input name="max-price" type="text" value="30000"></label>
+              </div>
+            </div>
           </fieldset>
-
           <fieldset>
             <legend>Производители:</legend>
             <ul class="manufactures">
@@ -129,7 +131,6 @@
               </li>
             </ul>
           </fieldset>
-
           <fieldset>
             <legend>Питание:</legend>
             <ul class="battery-type">
@@ -143,33 +144,29 @@
               </li>
             </ul>
           </fieldset>
-
           <button class="button filter-button">Показать</button>
         </form>
       </section>
-
       <div class="catalog">
         <section class="sorting">
           <h3 class="sorting-title">СОРТИРОВКА:</h3>
           <ul class="sorting-list">
-            <li><a class="current-sort" href="#">ПО&nbsp;ЦЕНЕ</a></li>
-            <li><a class="type-sort" href="#">ПО&nbsp;ТИПУ</a></li>
-            <li><a class="function-sort" href="#">ПО&nbsp;ФУНКЦИОНАЛУ</a></li>
+            <li><a class="sort current-sort" href="#">ПО&nbsp;ЦЕНЕ</a></li>
+            <li><a class="sort type-sort" href="#">ПО&nbsp;ТИПУ</a></li>
+            <li><a class="sort function-sort" href="#">ПО&nbsp;ФУНКЦИОНАЛУ</a></li>
           </ul>
           <ul class="order-switch">
             <li>
-              <a href="#">
-                <span class="visually-hidden">Вверх</span>
+              <a class="ascending-order current-order" href="#">
                 <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
-                  <path fill="#231F20" d="M5.5 0L0 10h11z"></path>
+                  <path fill="#231f20" d="M5.5 0L0 10h11z"></path>
                 </svg>
               </a>
             </li>
             <li>
-              <a href="#">
-                <span class="visually-hidden">Вниз</span>
+              <a class="descending-order" href="#">
                 <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
-                  <path fill="#231F20" d="M5.5 10L0 0h11"></path>
+                  <path fill="#231f20" d="M5.5 10L0 0h11"></path>
                 </svg>
               </a>
             </li>
@@ -310,7 +307,6 @@
             </div>
           </li>
         </ul>
-
         <ul class="pagination-list">
           <li class="pagination-item pagination-item-current"><a>1</a></li>
           <li class="pagination-item"><a href="#">2</a></li>
@@ -320,7 +316,6 @@
       </div>
     </div>
   </div>
-
   <article class="about-perforator">
     <div class="container">
       <h2>ПАРА СЛОВ О ПЕРФОРАТОРАХ</h2>
@@ -334,10 +329,8 @@
       </div>
     </div>
   </article>
-
 </main>
 <footer class="main-footer">
-
   <div class="container">
     <a class="footer-logo">Техномарт</a>
     <nav class="footer-navigation">
@@ -350,7 +343,6 @@
       </ul>
     </nav>
   </div>
-
   <div class="container">
     <address class="company-contacts">
       г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
@@ -363,11 +355,9 @@
       <li><a href="special-offers.html">Спецпредложение</a></li>
     </ul>
   </div>
-
   <div class="container">
     <p class="company-copyright">
-      &copy; 2010–2017 Компания «Техномарт»
-      Все права защищены
+      &copy; 2010–2017 Компания «Техномарт» Все права защищены
     </p>
     <ul class="footer-social">
       <li>
@@ -383,8 +373,7 @@
         <a class="social-button" href="#">
           <span class="visually-hidden">Фейсбук</span>
           <svg xmlns="http://www.w3.org/2000/svg" width="12" height="22" viewBox="0 0 10.15 21.74">
-            <path d="M3.34 1.12A4.77 4.77 0 0 1 6.53 0h3.61v3.81H7.81a1.07 1.07 0 0 0-1.09.83v2.55h3.42c-.08 1.23-.24 2.45-.41 3.67h-3v10.87H2.21V10.86H0V7.21h2.19V3.66a3.83 3.83 0 0 1 1.15-2.54z" fill="#fff">
-            </path>
+            <path d="M3.34 1.12A4.77 4.77 0 0 1 6.53 0h3.61v3.81H7.81a1.07 1.07 0 0 0-1.09.83v2.55h3.42c-.08 1.23-.24 2.45-.41 3.67h-3v10.87H2.21V10.86H0V7.21h2.19V3.66a3.83 3.83 0 0 1 1.15-2.54z" fill="#fff"></path>
           </svg>
         </a>
       </li>
@@ -392,8 +381,7 @@
         <a class="social-button" href="#">
           <span class="visually-hidden">Инстаграм</span>
           <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 20 20">
-            <path d="M18 0H2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm-8 6a4 4 0 1 1-4 4 4 4 0 0 1 4-4zM2.5 18a.47.47 0 0 1-.5-.5V9h2.1a3.4 3.4 0 0 0-.1 1 6 6 0 1 0 12 0 3.4 3.4 0 0 0-.1-1H18v8.5a.47.47 0 0 1-.5.5zM18 4.5a.47.47 0 0 1-.5.5h-2a.47.47 0 0 1-.5-.5v-2a.47.47 0 0 1 .5-.5h2a.47.47 0 0 1 .5.5z" fill="#fff">
-            </path>
+            <path d="M18 0H2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm-8 6a4 4 0 1 1-4 4 4 4 0 0 1 4-4zM2.5 18a.47.47 0 0 1-.5-.5V9h2.1a3.4 3.4 0 0 0-.1 1 6 6 0 1 0 12 0 3.4 3.4 0 0 0-.1-1H18v8.5a.47.47 0 0 1-.5.5zM18 4.5a.47.47 0 0 1-.5.5h-2a.47.47 0 0 1-.5-.5v-2a.47.47 0 0 1 .5-.5h2a.47.47 0 0 1 .5.5z" fill="#fff"></path>
           </svg>
         </a>
       </li>
@@ -403,12 +391,11 @@
       <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
     </p>
     <p class="site-copyright">
-      Разработано:
+      Разработано &mdash;
       <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
     </p>
   </div>
 </footer>
-
 <section class="modal modal-cart">
   <h2 class="visually-hidden">Купить или продолжить</h2>
   <p class="modal-cart-message">Товар добавлен в корзину!</p>
@@ -418,8 +405,6 @@
   </div>
   <button class="modal-close" type="button">Закрыть</button>
 </section>
-
-<script src="script_catalog.js"></script>
-
+<script src="js/script_catalog.js"></script>
 </body>
 </html>
