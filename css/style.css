@@ -1372,18 +1372,20 @@ h1 {
   background-color: #ffffff;
 }
 
-.about-us .comany-text {
+.about-us .company-text {
   margin-bottom: 26px;
 }
 
 .about-us .transportation {
-  margin-bottom: 20px;
+  margin: 0;
+  padding: 0;
 }
 
 .about-us ul {
   display: block;
   padding: 0;
   margin: 0 0 36px;
+  margin-top: 20px;
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 18px;
   line-height: 20px;
