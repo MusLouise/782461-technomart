@@ -12,15 +12,6 @@ for(var i=0; i<cartLink.length; i++){
   })
 }
 
-/*  cartLink.forEach( function (item){
-    item.addEventListener("click", function (evt) {
-      evt.preventDefault();
-      cartPopup.classList.add("modal-show");
-      cartOrder.focus();
-    })
-  } ); */
-
-
 cartClose.addEventListener("click", function (evt) {
   evt.preventDefault();
   cartPopup.classList.remove("modal-show");
